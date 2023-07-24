@@ -1,9 +1,4 @@
-# SETUP
-### pip install robotframework
-### pip install robotframework-seleniumlibrary
-### ??? install (safari/chrome) webdriver ???
-### pip install robotframework-datadriver
-# LOCAL RUN
-### Note: You might need to turn on the "allow browser to be controlled by automation" in your browser first
-### ./run.bash {PATH}
-### e.g. ./run.bash ./Resources/urls.csv
+on local machine, run "bot_init.sh"
+it will take to the remote instance
+then run "run.sh" to kick off the bot
+enjoy :)
