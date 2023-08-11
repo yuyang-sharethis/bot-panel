@@ -3,7 +3,6 @@ import os
 import json
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
@@ -37,8 +36,7 @@ def crawl(config):
     chrome_options.add_argument('--headless')
     chrome_options.add_argument(f'--user-data-dir=' + chrome_user_data_path)
     chrome_options.add_argument('--profile-directory=chrome_profile')
-    service = Service(executable_path=chrome_driver_path)
-    driver = webdriver.Chrome(service=service, options=chrome_options)
+    driver = webdriver.Chrome(executable_path=chrome_driver_path, options=chrome_options)
 
     print(f"sleeping... will return in {ts_offset}s")
     time.sleep(ts_offset)
