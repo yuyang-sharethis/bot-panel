@@ -11,13 +11,11 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 # process input
-path_to_json = '/Users/yuyangdong/Downloads/input/'
-# path_to_json = '/home/ubuntu/input/'
+path_to_json = '/home/ubuntu/input/'
 json_files = [f_json for f_json in os.listdir(path_to_json) if f_json.endswith('.json')]
 configs = []
 for json_file in json_files:
-    config = json.load(open('/Users/yuyangdong/Downloads/input/' + json_file))
-    # config = json.load(open('/home/ubuntu/input/' + json_file))
+    config = json.load(open('/home/ubuntu/input/' + json_file))
     configs += config
 
 for config in configs:
