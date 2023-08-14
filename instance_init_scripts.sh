@@ -27,3 +27,4 @@ rm -rf ./input
 mkdir input
 aws s3 cp --recursive s3://sharethis-datascience/bot_panel_input/ ./input/
 cd bot-panel/
+./run.sh
