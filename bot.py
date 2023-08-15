@@ -45,11 +45,12 @@ def crawl(config):
         # timeout if hang
         driver.set_page_load_timeout(1)
 
+        driver.delete_cookie("__stid")
+        driver.add_cookie({"name": "__stid", "value": f"st_bot_panel_id={estid}"})
+        cookie = driver.get_cookie("__stid")["value"]
+
         driver.get(url)
 
-        driver.delete_cookie("fpestid")
-        driver.add_cookie({"name": "fpestid", "value": f"st_bot_panel_id={estid}"})
-        cookie = driver.get_cookie("fpestid")["value"]
         print("pview done: " + url)
         print("cookie modified to: " + cookie)
 
