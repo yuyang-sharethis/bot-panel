@@ -30,7 +30,7 @@ def crawl(config):
 
     url = config["url"]
     estid = config["estid"]
-    ts_offset = int(config["ts_offset"])
+    ts_interval = int(config["interval"])
 
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
@@ -38,8 +38,8 @@ def crawl(config):
     chrome_options.add_argument('--profile-directory=chrome_profile')
     driver = webdriver.Chrome(executable_path=chrome_driver_path, options=chrome_options)
 
-    print(f"sleeping... will return in {ts_offset}s")
-    time.sleep(ts_offset)
+    print(f"sleeping... will return in {ts_interval}s")
+    time.sleep(ts_interval)
 
     try:
         # timeout if hang
