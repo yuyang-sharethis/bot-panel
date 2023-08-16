@@ -30,7 +30,7 @@ def crawl(config):
 
     url = config["url"]
     estid = config["estid"]
-    ts_interval = int(config["interval"])
+    ts_interval = int(config["ts_interval"])
 
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
