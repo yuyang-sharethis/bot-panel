@@ -43,7 +43,7 @@ def crawl(config):
 
     try:
         # timeout if hang
-        driver.set_page_load_timeout(1)
+        driver.set_page_load_timeout(5)
 
         driver.get(url)
 
